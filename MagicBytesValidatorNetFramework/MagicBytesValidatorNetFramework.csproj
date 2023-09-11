@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{04FDA514-3BE8-4938-A30F-655809AC8DAA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MagicBytesValidatorNetFramework</RootNamespace>
+    <AssemblyName>MagicBytesValidatorNetFramework</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Exceptions\ArgumentEmptyException.cs" />
+    <Compile Include="Exceptions\DuplicateEntryException.cs" />
+    <Compile Include="Exceptions\Http\MimeTypeMismatchException.cs" />
+    <Compile Include="Formats\Aif.cs" />
+    <Compile Include="Formats\Bin.cs" />
+    <Compile Include="Formats\Bmp.cs" />
+    <Compile Include="Formats\Cab.cs" />
+    <Compile Include="Formats\Doc.cs" />
+    <Compile Include="Formats\Docx.cs" />
+    <Compile Include="Formats\Dxr.cs" />
+    <Compile Include="Formats\Gif.cs" />
+    <Compile Include="Formats\Gz.cs" />
+    <Compile Include="Formats\Ico.cs" />
+    <Compile Include="Formats\Jpg.cs" />
+    <Compile Include="Formats\Midi.cs" />
+    <Compile Include="Formats\Mp3.cs" />
+    <Compile Include="Formats\Mp4.cs" />
+    <Compile Include="Formats\Mpg.cs" />
+    <Compile Include="Formats\Odp.cs" />
+    <Compile Include="Formats\Ods.cs" />
+    <Compile Include="Formats\Odt.cs" />
+    <Compile Include="Formats\Ogv.cs" />
+    <Compile Include="Formats\Pbm.cs" />
+    <Compile Include="Formats\Pdf.cs" />
+    <Compile Include="Formats\Pgm.cs" />
+    <Compile Include="Formats\Png.cs" />
+    <Compile Include="Formats\Ppm.cs" />
+    <Compile Include="Formats\Ppt.cs" />
+    <Compile Include="Formats\Ppt2.cs" />
+    <Compile Include="Formats\Pptx.cs" />
+    <Compile Include="Formats\Rar.cs" />
+    <Compile Include="Formats\Rpm.cs" />
+    <Compile Include="Formats\Rtf.cs" />
+    <Compile Include="Formats\Snd.cs" />
+    <Compile Include="Formats\ThreeGp.cs" />
+    <Compile Include="Formats\Tif.cs" />
+    <Compile Include="Formats\Tsp.cs" />
+    <Compile Include="Formats\Tsv.cs" />
+    <Compile Include="Formats\Txt.cs" />
+    <Compile Include="Formats\Webm.cs" />
+    <Compile Include="Formats\Xls.cs" />
+    <Compile Include="Formats\Xlsx.cs" />
+    <Compile Include="Formats\Z.cs" />
+    <Compile Include="Formats\Zip.cs" />
+    <Compile Include="Models\FileType.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\FileTypeCollector.cs" />
+    <Compile Include="Services\IMapping.cs" />
+    <Compile Include="Services\IValidator.cs" />
+    <Compile Include="Services\Mapping.cs" />
+    <Compile Include="Services\Streams\IStreamFileTypeProvider.cs" />
+    <Compile Include="Services\Streams\StreamFileTypeProvider.cs" />
+    <Compile Include="Services\Validator.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
